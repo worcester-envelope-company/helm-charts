@@ -1,11 +1,21 @@
 apiVersion: v1
 entries:
+  console-app:
+  - apiVersion: v2
+    appVersion: 0.0.0
+    created: "2023-01-02T10:03:51.98505445-05:00"
+    description: WEC chart for console apps
+    digest: 51aa1c808faee1a87855a1f189cf5fa752e64ab628f95c7168e96af7c7f1bf05
+    name: console-app
+    urls:
+    - https://worcester-envelope-company.github.io/helm-charts/console-app-0.1.2.tgz
+    version: 0.1.2
   test:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-01-02T09:45:40.462092505-05:00"
+    created: "2023-01-02T10:03:51.985328042-05:00"
     description: A Helm chart for Kubernetes
-    digest: 4cb24b2234277f6e96f63991e86d2baba6a3688c8337a6b527111811e46f2fa2
+    digest: 1b59b78e234968eb4cab6716770afd3c041ef7dde86b9a27c1b230ef2cd8771b
     name: test
     type: application
     urls:
@@ -14,12 +24,12 @@ entries:
   wec-microservice-deployment:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-01-02T09:45:40.462236374-05:00"
+    created: "2023-01-02T10:03:51.985476293-05:00"
     description: A Helm chart for Kubernetes
-    digest: c377710babe890452b37f6255c2ab2cabc7f77b7d213b25ac46c5bf010f98ecb
+    digest: abfd9592fdbec70ee5644a94b194047ded5df2657fb3fa47b83c134957796c6d
     name: wec-microservice-deployment
     type: application
     urls:
     - https://worcester-envelope-company.github.io/helm-charts/wec-microservice-deployment-0.1.0.tgz
     version: 0.1.0
-generated: "2023-01-02T09:45:40.461710684-05:00"
+generated: "2023-01-02T10:03:51.984797103-05:00"
