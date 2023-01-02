@@ -1,0 +1,57 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.name }}
+  labels:
+    app: {{ .Values.name }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Values.name }}
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.name }}
+      {{- if eq (.Values.enableDapr) true }}
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: {{ .Values.name | quote }}
+        dapr.io/app-port: "80"
+        dapr.io/config: "zipkin"
+        {{- if eq (.Values.enableDaprDebugLog | default false) true }}
+        dapr.io/log-level: "debug"
+        {{- end }}
+      {{- end }}
+    spec:
+      containers:
+      - image: {{ .Values.image }}:{{ .Values.tag }}
+        imagePullPolicy: Always
+        name: {{ .Values.name }}
+        {{- if .Values.env }}
+        env:
+        {{- if .Values.env.secret }}
+        {{- $projname := .Values.name -}}
+        {{- range $key, $val := .Values.env.secret }}
+        - name: {{ $key }}
+          valueFrom:
+            secretKeyRef:
+              name: {{ $projname }}
+              key: {{ $key }}
+        {{- end }}
+        {{- end }}
+        {{- if .Values.env.normal }}
+        {{- range $key, $val := .Values.env.normal }}
+        - name: {{ $key }}
+          value: {{ $val | quote }}
+        {{- end}}
+        {{- end }}
+        {{- end }}
+        ports:
+        - containerPort: 80
+          name: {{ .Values.name }}
+          protocol: TCP
+      imagePullSecrets:
+      - name: {{ .Values.imagePullSecret }}
+      restartPolicy: Always

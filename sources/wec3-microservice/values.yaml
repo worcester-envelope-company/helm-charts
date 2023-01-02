@@ -1,0 +1,23 @@
+# name of the deployment AND the app-id for dapr if enabled
+name: ""
+image: ""
+tag: ""
+# if host is specifed an ingress will be created
+host: ""
+# array of env variables to apss, either in deployment or as a secret
+env:
+  secret: {}
+  normal: {}
+
+# optional parameters
+
+imagePullSecret: docker-wecma
+
+# if ingress is created dont make ssl certificate
+disableSsl: false
+
+# dapr will be enabled by default
+enableDapr: true
+
+# dapr debugging will be diabled by default
+enableDaprDebugLog: false
