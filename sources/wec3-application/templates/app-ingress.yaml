@@ -1,0 +1,29 @@
+{{ if .Values.host }}
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  {{- if eq (.Values.disableSsl | default false) false }}
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+  {{- end }}
+  name: {{ .Values.name }}
+spec:
+  rules:
+  - host: {{ .Values.host }}
+    http:
+      paths:
+      - backend:
+          service:
+            name: {{ .Values.name }}
+            port:
+              number: 80
+        path: /
+        pathType: ImplementationSpecific
+  {{- if eq (.Values.disableSsl | default false) false }}
+  tls:
+  - hosts:
+    - {{ .Values.host }}
+    secretName: {{ .Values.host | replace "." "-" }}-crt
+  {{- end }}
+{{ end }}

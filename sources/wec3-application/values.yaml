@@ -1,0 +1,13 @@
+# name of the deployment AND the app-id for dapr if enabled
+name: ""
+image: ""
+tag: ""
+# if host is specifed an ingress will be created
+host: ""
+
+# optional parameters
+
+imagePullSecret: docker-wecma
+
+# if ingress is created dont make ssl certificate
+disableSsl: false

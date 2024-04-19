@@ -3,9 +3,9 @@ entries:
   console-app:
   - apiVersion: v2
     appVersion: 0.0.0
-    created: "2023-01-02T10:03:51.98505445-05:00"
+    created: "2024-04-19T17:19:34.564963813-04:00"
     description: WEC chart for console apps
-    digest: 51aa1c808faee1a87855a1f189cf5fa752e64ab628f95c7168e96af7c7f1bf05
+    digest: 5fb89b7a4f23a346dca738739f50b260a7ad0511e13be29b1d3c5355eac9bdb6
     name: console-app
     urls:
     - https://worcester-envelope-company.github.io/helm-charts/console-app-0.1.2.tgz
@@ -13,23 +13,34 @@ entries:
   test:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-01-02T10:03:51.985328042-05:00"
+    created: "2024-04-19T17:19:34.565632944-04:00"
     description: A Helm chart for Kubernetes
-    digest: 1b59b78e234968eb4cab6716770afd3c041ef7dde86b9a27c1b230ef2cd8771b
+    digest: 2e095096d92b64335353d3f9aa713f6cd50c23224b6cc0b6d992157fe6bf67c4
     name: test
     type: application
     urls:
     - https://worcester-envelope-company.github.io/helm-charts/test-0.1.0.tgz
     version: 0.1.0
+  wec-application-deployment:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2024-04-19T17:19:34.566350701-04:00"
+    description: A Helm chart for Kubernetes
+    digest: c452551287ad6ab182057a62dddc40837031c503c377981cc962a24bb2c2dadb
+    name: wec-application-deployment
+    type: application
+    urls:
+    - https://worcester-envelope-company.github.io/helm-charts/wec-application-deployment-0.1.0.tgz
+    version: 0.1.0
   wec-microservice-deployment:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-01-02T10:03:51.985476293-05:00"
+    created: "2024-04-19T17:19:34.566697828-04:00"
     description: A Helm chart for Kubernetes
-    digest: abfd9592fdbec70ee5644a94b194047ded5df2657fb3fa47b83c134957796c6d
+    digest: 363c598d5cf16ab0128d543e68347e4caa43cd8863d565a7c7bcbc1a2277a12b
     name: wec-microservice-deployment
     type: application
     urls:
     - https://worcester-envelope-company.github.io/helm-charts/wec-microservice-deployment-0.1.0.tgz
     version: 0.1.0
-generated: "2023-01-02T10:03:51.984797103-05:00"
+generated: "2024-04-19T17:19:34.564686311-04:00"
