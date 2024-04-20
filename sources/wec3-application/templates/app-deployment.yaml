@@ -19,10 +19,12 @@ spec:
       - image: {{ .Values.image }}:{{ .Values.tag }}
         imagePullPolicy: IfNotPresent
         name: {{ .Values.name }}
-        env:
+        env: {{ .Values.env }}
+        {{- if eq (.Values.pullEnvfromSecret | default true) true }}
         envFrom:
         - secretRef:
             name: {{ .Values.name }}-config
+        {{- end }}
         ports:
         - containerPort: 80
           name: {{ .Values.name }}
