@@ -3,7 +3,7 @@ entries:
   console-app:
   - apiVersion: v2
     appVersion: 0.0.0
-    created: "2024-04-20T10:12:22.369577125-04:00"
+    created: "2024-04-20T10:29:55.969005104-04:00"
     description: WEC chart for console apps
     digest: 5fb89b7a4f23a346dca738739f50b260a7ad0511e13be29b1d3c5355eac9bdb6
     name: console-app
@@ -13,7 +13,7 @@ entries:
   test:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-04-20T10:12:22.369870617-04:00"
+    created: "2024-04-20T10:29:55.969293799-04:00"
     description: A Helm chart for Kubernetes
     digest: 2e095096d92b64335353d3f9aa713f6cd50c23224b6cc0b6d992157fe6bf67c4
     name: test
@@ -23,8 +23,18 @@ entries:
     version: 0.1.0
   wec-application-deployment:
   - apiVersion: v2
+    appVersion: 0.1.3
+    created: "2024-04-20T10:29:55.969747036-04:00"
+    description: A Helm chart for Kubernetes
+    digest: feb08cab5b4e063d571f882bf5b81bfecabcbf2c6f56f0c42be04b48677766ae
+    name: wec-application-deployment
+    type: application
+    urls:
+    - https://worcester-envelope-company.github.io/helm-charts/wec-application-deployment-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
     appVersion: 0.1.2
-    created: "2024-04-20T10:12:22.370226281-04:00"
+    created: "2024-04-20T10:29:55.969644447-04:00"
     description: A Helm chart for Kubernetes
     digest: f966bde6c900ef4b3b3cc38e99183aa5857a01a1e2555215e9ff7416c7577200
     name: wec-application-deployment
@@ -34,7 +44,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 0.1.1
-    created: "2024-04-20T10:12:22.370104666-04:00"
+    created: "2024-04-20T10:29:55.969522899-04:00"
     description: A Helm chart for Kubernetes
     digest: 22166fe407affce128048c9eebc5643150687f256850745fa1f1e0eed4073027
     name: wec-application-deployment
@@ -44,7 +54,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-04-20T10:12:22.369984821-04:00"
+    created: "2024-04-20T10:29:55.969422458-04:00"
     description: A Helm chart for Kubernetes
     digest: c452551287ad6ab182057a62dddc40837031c503c377981cc962a24bb2c2dadb
     name: wec-application-deployment
@@ -55,7 +65,7 @@ entries:
   wec-microservice-deployment:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-04-20T10:12:22.370349834-04:00"
+    created: "2024-04-20T10:29:55.969863754-04:00"
     description: A Helm chart for Kubernetes
     digest: 363c598d5cf16ab0128d543e68347e4caa43cd8863d565a7c7bcbc1a2277a12b
     name: wec-microservice-deployment
@@ -63,4 +73,4 @@ entries:
     urls:
     - https://worcester-envelope-company.github.io/helm-charts/wec-microservice-deployment-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-20T10:12:22.369324363-04:00"
+generated: "2024-04-20T10:29:55.968744209-04:00"
