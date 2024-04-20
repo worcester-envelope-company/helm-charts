@@ -22,7 +22,7 @@ spec:
         env:
         envFrom:
         - secretRef:
-            name: {{ .Values.name }}-envvars
+            name: {{ .Values.name }}-config
         ports:
         - containerPort: 80
           name: {{ .Values.name }}
