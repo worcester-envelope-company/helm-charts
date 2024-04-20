@@ -6,6 +6,7 @@ tag: test-tag-1
 host: test.tester.com
 # optional parameters
 
+#pullEnvfromSecret: true
 #imagePullSecret: docker-wecma
 
 # if ingress is created dont make ssl certificate

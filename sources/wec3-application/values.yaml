@@ -6,8 +6,6 @@ tag: ""
 host: ""
 
 # optional parameters
-env: {}
-
 pullEnvfromSecret: true
 
 imagePullSecret: docker-wecma
