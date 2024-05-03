@@ -1,0 +1,14 @@
+# name of the deployment
+name: ""
+image: ""
+tag: ""
+
+# uses unix chrontab syntax
+# https://crontab.guru/ is a helpful generator
+# remmebr this is UTC time
+schedule: "1 1 1 1 1" #At 01:01 on day-of-month 1 and on Monday in January.
+
+# optional parameters
+pullEnvfromSecret: true
+
+imagePullSecret: docker-wecma

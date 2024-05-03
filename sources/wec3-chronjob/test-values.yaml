@@ -1,0 +1,7 @@
+name: testname
+image: test/image
+tag: testtag1
+
+schedule: "05 10 * * 1-5"
+
+imagePullSecret: test-pull-sec

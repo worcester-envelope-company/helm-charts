@@ -1,0 +1,27 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: {{ .Values.name }}
+  labels:
+    app: {{ .Values.name }}
+spec:
+  schedule: {{ .Values.schedule }}
+  jobTemplate:
+    metadata:
+      labels:
+        app: {{ .Values.name }}
+    spec:
+      containers:
+      - image: {{ .Values.image }}:{{ .Values.tag }}
+        imagePullPolicy: IfNotPresent
+        name: {{ .Values.name }}
+        stdin: true
+        tty: true
+        {{- if eq (.Values.pullEnvfromSecret) true }}
+        envFrom:
+        - secretRef:
+            name: {{ .Values.name }}-config
+        {{- end }}
+      imagePullSecrets:
+      - name: {{ .Values.imagePullSecret }}
+      restartPolicy: OnFailure
