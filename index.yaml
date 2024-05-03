@@ -3,7 +3,7 @@ entries:
   console-app:
   - apiVersion: v2
     appVersion: 0.0.0
-    created: "2024-05-03T17:21:08.288338489-04:00"
+    created: "2024-05-03T17:23:18.587723611-04:00"
     description: WEC chart for console apps
     digest: 5fb89b7a4f23a346dca738739f50b260a7ad0511e13be29b1d3c5355eac9bdb6
     name: console-app
@@ -24,7 +24,7 @@ entries:
   wec-application-deployment:
   - apiVersion: v2
     appVersion: 0.1.3
-    created: "2024-05-03T17:21:08.288460211-04:00"
+    created: "2024-05-03T17:23:18.587858554-04:00"
     description: A Helm chart for Kubernetes
     digest: feb08cab5b4e063d571f882bf5b81bfecabcbf2c6f56f0c42be04b48677766ae
     name: wec-application-deployment
@@ -35,7 +35,7 @@ entries:
   wec-microservice-deployment:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-05-03T17:21:08.288591195-04:00"
+    created: "2024-05-03T17:23:18.587999243-04:00"
     description: A Helm chart for Kubernetes
     digest: 363c598d5cf16ab0128d543e68347e4caa43cd8863d565a7c7bcbc1a2277a12b
     name: wec-microservice-deployment
@@ -46,11 +46,20 @@ entries:
   wec-scheduled-console-app:
   - apiVersion: v2
     appVersion: 0.0.0
-    created: "2024-05-03T17:21:08.288707406-04:00"
+    created: "2024-05-03T17:23:18.588174295-04:00"
+    description: WEC chart for console apps that run as chronjobs
+    digest: 86649fd90fd71e6dfa93dbc88eafbf965ce6946f22601365c98e9f41020f4f65
+    name: wec-scheduled-console-app
+    urls:
+    - https://worcester-envelope-company.github.io/helm-charts/wec-scheduled-console-app-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 0.0.0
+    created: "2024-05-03T17:23:18.588090271-04:00"
     description: WEC chart for console apps that run as chronjobs
     digest: 02662b365765fce5283e11250c848649182c9e6d2bfc26c2b7afdde6f93acda3
     name: wec-scheduled-console-app
     urls:
     - https://worcester-envelope-company.github.io/helm-charts/wec-scheduled-console-app-0.1.0.tgz
     version: 0.1.0
-generated: "2024-05-03T17:21:08.288090986-04:00"
+generated: "2024-05-03T17:23:18.58746653-04:00"
