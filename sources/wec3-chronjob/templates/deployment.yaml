@@ -11,17 +11,19 @@ spec:
       labels:
         app: {{ .Values.name }}
     spec:
-      containers:
-      - image: {{ .Values.image }}:{{ .Values.tag }}
-        imagePullPolicy: IfNotPresent
-        name: {{ .Values.name }}
-        stdin: true
-        tty: true
-        {{- if eq (.Values.pullEnvfromSecret) true }}
-        envFrom:
-        - secretRef:
-            name: {{ .Values.name }}-config
-        {{- end }}
-      imagePullSecrets:
-      - name: {{ .Values.imagePullSecret }}
-      restartPolicy: Never
+      template:
+        spec:
+          containers:
+          - image: {{ .Values.image }}:{{ .Values.tag }}
+            imagePullPolicy: IfNotPresent
+            name: {{ .Values.name }}
+            stdin: true
+            tty: true
+            {{- if eq (.Values.pullEnvfromSecret) true }}
+            envFrom:
+            - secretRef:
+                name: {{ .Values.name }}-config
+            {{- end }}
+          imagePullSecrets:
+          - name: {{ .Values.imagePullSecret }}
+          restartPolicy: Never
