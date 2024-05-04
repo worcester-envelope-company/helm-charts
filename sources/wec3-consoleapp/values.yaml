@@ -2,13 +2,6 @@
 name: ""
 image: ""
 tag: ""
-# if host is specifed an ingress will be created
-host: ""
-# array of env variables to apss, either in deployment or as a secret
-env:
-  secret: {}
-  normal: {}
 
-# optional parameters
-
+pullEnvfromSecret: true
 imagePullSecret: docker-wecma

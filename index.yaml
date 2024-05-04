@@ -3,28 +3,17 @@ entries:
   console-app:
     - apiVersion: v2
       appVersion: 0.0.0
-      created: "2024-05-03T17:32:03.451157646-04:00"
+      created: "2024-05-04T08:25:38.994736862-04:00"
       description: WEC chart for console apps
       digest: 5fb89b7a4f23a346dca738739f50b260a7ad0511e13be29b1d3c5355eac9bdb6
       name: console-app
       urls:
         - https://worcester-envelope-company.github.io/helm-charts/console-app-0.1.2.tgz
       version: 0.1.2
-  test:
-    - apiVersion: v2
-      appVersion: 1.16.0
-      created: "2024-04-20T10:29:55.969293799-04:00"
-      description: A Helm chart for Kubernetes
-      digest: 2e095096d92b64335353d3f9aa713f6cd50c23224b6cc0b6d992157fe6bf67c4
-      name: test
-      type: application
-      urls:
-        - https://worcester-envelope-company.github.io/helm-charts/test-0.1.0.tgz
-      version: 0.1.0
   wec-application-deployment:
     - apiVersion: v2
       appVersion: 0.1.3
-      created: "2024-05-03T17:32:03.451280242-04:00"
+      created: "2024-05-04T08:25:38.994860183-04:00"
       description: A Helm chart for Kubernetes
       digest: feb08cab5b4e063d571f882bf5b81bfecabcbf2c6f56f0c42be04b48677766ae
       name: wec-application-deployment
@@ -32,10 +21,20 @@ entries:
       urls:
         - https://worcester-envelope-company.github.io/helm-charts/wec-application-deployment-0.1.3.tgz
       version: 0.1.3
+  wec-console-app:
+    - apiVersion: v2
+      appVersion: 0.0.0
+      created: "2024-05-04T08:25:38.994974653-04:00"
+      description: WEC chart for console apps
+      digest: 9683bc40ee0db03989e950711beb47f95afa638d2d0687dbf322e0bc524a1d58
+      name: wec-console-app
+      urls:
+        - https://worcester-envelope-company.github.io/helm-charts/wec-console-app-0.1.3.tgz
+      version: 0.1.3
   wec-microservice-deployment:
     - apiVersion: v2
       appVersion: 0.1.0
-      created: "2024-05-03T17:32:03.451424152-04:00"
+      created: "2024-05-04T08:25:38.995124208-04:00"
       description: A Helm chart for Kubernetes
       digest: 363c598d5cf16ab0128d543e68347e4caa43cd8863d565a7c7bcbc1a2277a12b
       name: wec-microservice-deployment
@@ -46,11 +45,11 @@ entries:
   wec-scheduled-console-app:
     - apiVersion: v2
       appVersion: 0.0.0
-      created: "2024-05-03T17:32:03.451544113-04:00"
+      created: "2024-05-04T08:25:38.995216676-04:00"
       description: WEC chart for console apps that run as chronjobs
       digest: b7012bcaa8e1fc711488ce3404ae2c045a3f04b519389bcb398ac9b4596e3be1
       name: wec-scheduled-console-app
       urls:
         - https://worcester-envelope-company.github.io/helm-charts/wec-scheduled-console-app-0.1.2.tgz
       version: 0.1.2
-generated: "2024-05-03T17:32:03.45090005-04:00"
+generated: "2024-05-04T08:25:38.994458921-04:00"

@@ -20,24 +20,10 @@ spec:
         name: {{ .Values.name }}
         stdin: true
         tty: true
-        {{- if .Values.env }}
-        env:
-        {{- if .Values.env.secret }}
-        {{- $projname := .Values.name -}}
-        {{- range $key, $val := .Values.env.secret }}
-        - name: {{ $key }}
-          valueFrom:
-            secretKeyRef:
-              name: {{ $projname }}
-              key: {{ $key }}
-        {{- end }}
-        {{- end }}
-        {{- if .Values.env.normal }}
-        {{- range $key, $val := .Values.env.normal }}
-        - name: {{ $key }}
-          value: {{ $val | quote }}
-        {{- end}}
-        {{- end }}
+        {{- if eq (.Values.pullEnvfromSecret) true }}
+        envFrom:
+        - secretRef:
+            name: {{ .Values.name }}-config
         {{- end }}
       imagePullSecrets:
       - name: {{ .Values.imagePullSecret }}

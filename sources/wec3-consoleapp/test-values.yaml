@@ -1,9 +1,5 @@
 name: testname
 image: test/image
 tag: testtag1
-env:
-  secret:
-    Test_TTTTT: test
-  normal:
-    ASPNETCORE_ENVIRONMENT: Testing
+
 imagePullSecret: test-pull-sec
